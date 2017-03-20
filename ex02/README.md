@@ -18,8 +18,7 @@ done
 
 ```bash
 #!/bin/bash 
-## Script 2
-##
+# Script 2
 if (( $# < 3 ))
 then
 printf "%b" "Error. Not enough arguments.\n" >&2
@@ -37,6 +36,7 @@ fi
 
 ```bash
 #!/bin/bash
+# Script 3
 INFILE=$1
 OUTFILE=$2
 if [ -e "$INFILE" ]
