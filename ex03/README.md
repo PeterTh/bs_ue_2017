@@ -7,9 +7,9 @@ In this exercise sheet you will schedule the execution of different processes on
 | Process | Arrival Time | Service Time | Priority |
 |---------|--------------|--------------|----------|
 | A       | 0            | 3            | 1        |
-| B       | 2            | 6            | 1        |
-| C       | 4            | 4            | 2        |
-| D       | 6            | 5            | 2        |
+| B       | 3            | 10           | 1        |
+| C       | 5            | 4            | 2        |
+| D       | 6            | 6            | 2        |
 | E       | 8            | 2            | 3        |
 
 The previous table describes the arrival time, service time and priority of 5 different processes. This task consists in:
