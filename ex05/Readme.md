@@ -10,23 +10,23 @@ For this task your goal is to simulate the database server, middle-ware server, 
 
 First of all, you need to create 3 named pipes, each of them representing one of the aforementined servers. 
 
-To simulate each of the programs, you need to create a program which runs forever in an endless loop. Within this loop, a quantity between 2 and 7 seconds is randomly generated. The program should sleep then for that quantity of time. After that it should log a message (you choose the message content! Keep your messages shorter than PIPE_BUF bytes to ensure atomic writes of your messages) on its corresponding fifo. 
+To simulate each of the programs, you need to create a program which runs forever in an endless loop. Within this loop, a quantity between 2 and 7 seconds is randomly generated. The program should sleep then for that quantity of time. After that it should log a message (you choose the message content! Keep your messages shorter than `PIPE_BUF` bytes to ensure atomic writes of your messages) on its corresponding fifo. 
 
-The loggin service will open the three fifos and will wait for input on all of them using select(). Each received message in any of these pipes should be consumed by the service and printed on the standard output. Assume that this service will also run forever in an endless loop. 
+The loggin service will open the three fifos and will wait for input on all of them using `select()`. Each received message in any of these pipes should be consumed by the service and printed on the standard output. Assume that this service will also run forever in an endless loop. 
 
 An example of how the output will be shown could be:
 
-'''
-[web] message 1 from web server
-[middle-ware] message 1 from middle-ware server
-[middle-ware] message 2 from middle-ware server
-[web] message 2 from web server
-[database] message 1 from database
-[middle-ware] message 3 from middle-ware server
-'''
+    [web] message 1 from web server
+    [middle-ware] message 1 from middle-ware server
+    [middle-ware] message 2 from middle-ware server
+    [web] message 2 from web server
+    [database] message 1 from database
+    [middle-ware] message 3 from middle-ware server
+
 
 # Task 2
 
-Create a program that implements the execution of the command 'ls | grep <keyword>'. To implement this behaviour, your program is required to create a proces that executes the command 'ls'. Create another process that executes the command 'grep keyword'. Communicate both process by using an unnamed pipe. This assignment requires to explicitly use 'fork()', 'pipe()', and 'dup()/dup2()'.
+Create a program that implements the execution of the command `ls | grep <keyword>`. To implement this behaviour, your program is required to create a proces that executes the command `ls`. Create another process that executes the command `grep keyword`. Communicate between both process by using an unnamed pipe. 
+This assignment **requires** that you explicitly use `fork()`, `pipe()`, and `dup()/dup2()`.
 
 
