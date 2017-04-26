@@ -20,7 +20,7 @@ Every child process simply prints its `pid` on the standard output. Analyse the 
 
 Write a program in which the parent process creates exactly 1 child. After creating the child, the behaviour of the **parent** process is as follows: it sends the signal `SIGUSR1` to the child every 5 seconds. To implement this behaviour the parent process must use the following system calls: `alarm()` and `pause()`. After sending the signal `SIGUSR1` three times, the fourth time the signal `SIGUSR2` is sent to the child. After this, the parent waits for the child to finish. 
 
-The behaviour of the **child** is as follows: it waits until it is interrupted by any signal. If the signal received is `SIGUSR1` it prints a message to the standard output. If the signal received is `SIGUSR2` then it finishes. In addition, during the first 5 seconds of its execution, the signal `SIGUSR2` should be blocked. 
+The behaviour of the **child** is as follows: it waits until it is interrupted by any signal. If the signal received is `SIGUSR1` it prints a message to the standard output. If the signal received is `SIGUSR2` then it finishes. In addition, during the first 15 seconds of its execution, the signal `SIGUSR2` should be blocked. 
 
 Students are expected to check the behaviour of `alarm()` and `pause()` in the man pages.
 
