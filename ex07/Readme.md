@@ -1,6 +1,8 @@
 # Exercise Sheet 7
 
 In this exercise sheet you will use POSIX threads and test out different methods for mutual exclusion and synchronization.
+The deadline for this exercise is June 7th.
+
 
 # Task 1
 
