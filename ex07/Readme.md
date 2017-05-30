@@ -8,7 +8,7 @@ The deadline for this exercise is June 7th.
 
 Write a program which spawns 10 threads. 
 
-* Each thread waits for a random time between 0 and 2 seconds, then creates a file called `threadN.txt` (where `N` is the thread id) and writes its thread id (returned by `gettid`) to this file. Ensure that the file is closed in case a thread opens it and is subsequently interrupted (study the `pthread_cleanup` family of functions).
+* Each thread waits for a random time between 0 and 2 seconds, then creates a file called `threadN.txt` (where `N` is the thread number between 0 and 9) and writes its thread id (returned by `gettid`) to this file. Ensure that the file is closed in case a thread opens it and is subsequently interrupted (study the `pthread_cleanup` family of functions).
 * After spawning all threads, for each thread the main program decides whether to randomly cancel the thread, with a chance of cancellation of 50%.
 * Afterwards, the main program waits for all threads to exit.
 
